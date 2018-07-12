@@ -53,7 +53,7 @@ verify-build:
 	hack/verify-build.sh
 
 manifests:
-	hack/dockerized "DOCKER_PREFIX=${DOCKER_PREFIX} DOCKER_TAG=${DOCKER_TAG} ./hack/build-manifests.sh"
+	hack/dockerized ./hack/build-manifests.sh
 
 .release-functest:
 	make functest > .release-functest 2>&1
